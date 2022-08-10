@@ -23,14 +23,15 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form">
+                        <form action="/registrasi/mitra" method="POST" class="register-form" id="register-form">
+                            {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Nama Mitra" required="required"/>
+                                <label for="Nama_Mitra"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="Nama_Mitra" id="Nama_Mitra" placeholder="Nama Mitra" required="required"/>
                             </div>
                             <div class="form-group">
-                                <label for="jenis-khs"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" required>
+                                <label for="Jenis_KHS"><i class="zmdi zmdi-filter-list"></i></label>
+                                <select class="form-select" aria-label="Default select example" name="Jenis_KHS" id="Jenis_KHS" required>
                                     <option selected>Jenis KHS</option>
                                     <option value="1">KHS</option>
                                     <option value="2">IOAN</option>
@@ -38,46 +39,46 @@
                             </div>
                             <div class="form-group">
                                 <label for="no-khs"><i class="zmdi zmdi-collection-item-1"></i></label>
-                                <input type="text" name="no-khs" id="no-khs" placeholder="No-KHS" required="required"/>
+                                <input type="text" name="Nomor_KHS" id="Nomor_KHS" placeholder="No-KHS" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="date"><i class="zmdi zmdi-calendar"></i></label>
-                                <input type="date" name="date" id="date" placeholder="Tanggal Berakhir KHS" required="required"/>
+                                <input type="date" name="Tanggal_Berakhir_KHS" id="Tanggal_Berakhir_KHS" placeholder="Tanggal Berakhir KHS" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="name-hr"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name-hr" id="name-hr" placeholder="Nama Penanggung Jawab" required="required"/>
+                                <input type="text" name="Nama_Penanggung_Jawab" id="Nama_Penanggung_Jawab" placeholder="Nama Penanggung Jawab" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Email Penanggung Jawab" required="required"/>
+                                <input type="email" name="Email_Penanggung_Jawab" id="Email_Penanggung_Jawab" placeholder="Email Penanggung Jawab" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="phone"><i class="zmdi zmdi-phone"></i></label>
-                                <input type="text" name="phone" id="phone" placeholder="No Hp Penanggung Jawab" required="required"/>
+                                <input type="text" name="No_HP" id="No_HP" placeholder="No Hp Penanggung Jawab" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="address"><i class="zmdi zmdi-home"></i></label>
-                                <input type="text" name="address" id="address" placeholder="Alamat Penanggung Jawab" required="required"/>
+                                <input type="text" name="Alamat_Penanggung_Jawab" id="Alamat_Penanggung_Jawab" placeholder="Alamat Penanggung Jawab" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="no-identitas"><i class="zmdi zmdi-collection-item-1"></i></label>
-                                <input type="text" name="no-identitas" id="no-identitas" placeholder="No Identitas" required="required"/>
+                                <input type="text" name="No_Identitas" id="No_Identitas" placeholder="No Identitas" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="foto-identitas"><i class="zmdi zmdi-image"></i></label>
-                                <input type="file" name="foto-identitas" id="foto-identitas" placeholder="Foto Identitas" required="required"/>
+                                <input type="file" name="Foto_Identitas" id="Foto_Identitas" placeholder="Foto Identitas" required="required"/>
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password" required="required"/>
+                                <input type="password" name="Password" id="Password" placeholder="Password" required="required"/>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <button type="submit" name="signup" id="signup" class="form-submit" >Register</button>
                             </div>
                         </form>
                     </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MitraController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/registrasi', function () {
-    return view('registrasi');
-});
+Route::get('/registrasi', [MitraController::class, 'create']);
+Route::post('/registrasi/mitra', [MitraController::class, 'store']);
