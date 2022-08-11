@@ -12,5 +12,10 @@ class Mitra extends Model
     protected $guarded = ["id"];
     protected $attributes = [
         "Jumlah_Minimal_Naker" => 0
-    ];      
+    ];  
+    
+    public function mitra()
+    {
+        return $this->hasMany(Mitra::class);
+    }
 }

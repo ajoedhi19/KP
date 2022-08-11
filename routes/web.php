@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MitraController;
+namespace App\Http\controllers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get('/registrasi', [MitraController::class, 'create']);
 Route::post('/registrasi/mitra', [MitraController::class, 'store']);
+
+Route::get('/dashboard/admin', [AdminController::class, 'index']);
+Route::get('/dashboard/mitra', [MitraController::class, 'index']);
