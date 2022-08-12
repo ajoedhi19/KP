@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\controllers;
+
+use App\Http\Controllers\NakerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +25,6 @@ Route::post('/registrasi/mitra', [MitraController::class, 'store']);
 
 Route::get('/dashboard/admin', [AdminController::class, 'index']);
 Route::get('/dashboard/mitra', [MitraController::class, 'index']);
-Route::get('/dashboard/mitra/formnaker', function () {
-    return view('dashboard.Mitra.formnaker');
-});
+
+Route::get('/dashboard/mitra/formnaker', [NakerController::class, 'create']);
+Route::post('/dashboard/mitra/formnaker/registrasi', [NakerController::class, 'store']);
