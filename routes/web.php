@@ -23,3 +23,6 @@ Route::post('/registrasi/mitra', [MitraController::class, 'store']);
 
 Route::get('/dashboard/admin', [AdminController::class, 'index']);
 Route::get('/dashboard/mitra', [MitraController::class, 'index']);
+Route::get('/dashboard/mitra/formnaker', function () {
+    return view('dashboard.Mitra.formnaker');
+});
