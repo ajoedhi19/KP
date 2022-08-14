@@ -4,7 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
 return new class extends Migration
 {
     /**
@@ -31,14 +30,14 @@ return new class extends Migration
             $table->string('Nama_Keluarga');
             $table->string('Email');
             $table->unsignedInteger('id_witel');
-            // $table->foreign('id_witel')->references('id')->on('witels');
+            $table->foreign('id_witel')->references('id')->on('witels');
             $table->boolean('status_naker');
             $table->unsignedInteger('id_direktorat');
-            // $table->foreign('id_direktorat')->references('id')->on('direktorats');
+            $table->foreign('id_direktorat')->references('id')->on('direktorats');
             $table->unsignedInteger('Level_Pendidikan');
             $table->string('Posisi');
             $table->unsignedInteger('id_mitra');
-            // $table->foreign('id_mitra')->references('id')->on('mitras');
+            $table->foreign('id_mitra')->references('id')->on('mitras');
             $table->date('Tanggal_Pengajuan');
             $table->string('NIK_Waspag_TA');
             $table->string('Regional');

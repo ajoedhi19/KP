@@ -29,129 +29,130 @@
                     <h2 class="title">Form Naker</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form action="/dashboard/mitra/formnaker/registrasi" method="POST">
+                        {{ csrf_field() }}
                         <div class="form-row">
-                            <div class="name">Nama</div>
+                            <label class="name" for="Nama">Nama</label>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="Nama">
+                                <input class="input--style-6" type="text" name="Nama" id="Nama" required="required">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Tanggal Lahir</div>
+                            <label class="name" for="Tanggal_Lahir">Tanggal Lahir</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="Tanggal_Lahir">
+                                    <input class="input--style-6" type="date" name="Tanggal_Lahir" id="Tanggal_Lahir" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Tempat Lahir</div>
+                            <label class="name" for="Tempat_Lahir">Tempat Lahir</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="Tempat_Lahir">
+                                    <input class="input--style-6" type="text" name="Tempat_Lahir" id="Tempat_Lahir" required="required">
                                     {{-- <textarea class="textarea--style-6" name="Tempat_Lahir"></textarea> --}}
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Jenis Kelamin</div>
+                            <label class="name" for="Jenis_Kelamin">Jenis Kelamin</label>
                             <div class="value">
                                 <label for="Jenis_KHS"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Jenis_KHS" id="Jenis_KHS" required>
+                                <select class="form-select" aria-label="Default select example" name="Jenis_Kelamin" id="Jenis_Kelamin" required="required">
                                     <option selected>Jenis Kelamin</option>
                                     <option value="1">Laki-Laki</option>
                                     <option value="2">Perempuan</option>
                                   </select>
                             </div>
-                            </div>
+                        </div>
                         <div class="form-row">
-                            <div class="name">Alamat</div>
+                            <label class="name" for="Alamat">Alamat</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea--style-6" name="Alamat"></textarea>
+                                    <textarea class="textarea--style-6" name="Alamat" id="Alamat" required="required"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">No KTP</div>
+                            <label class="name" for="No_KTP">No KTP</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="No_KTP">
+                                    <input class="input--style-6" type="date" name="No_KTP" id="No_KTP" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Upload KTP</div>
+                            <label class="name" for="Foto_KTP">Upload KTP</label>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="Upload_KTP" id="file">
-                                    <label class="label--file" for="file">Pilih file</label>
+                                    <input class="input-file" type="file" name="Foto_KTP" id="Foto_KTP" required="required">
+                                    <label class="label--file" for="Foto_KTP">Pilih file</label>
                                     <span class="input-file__info">Tidak ada file terpilih</span>
                                 </div>
                                 <div class="label--desc">Unggah file KTP</div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">No KK</div>
+                            <div class="name" for="No_KK">No KK</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="No_KK">
+                                    <input class="input--style-6" type="text" name="No_KK" id="No_KK" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">No Kartu BPJS Kesehatan</div>
+                            <label class="name" for="No_Kartu_BPJS">No Kartu BPJS</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="No_Kartu_BPJS_Kesehatan">
+                                    <input class="input--style-6" type="text" name="No_Kartu_BPJS" id="No_Kartu_BPJS" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">No NPWP</div>
+                            <label class="name" for="No_NPWP">No NPWP</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="No_NPWP">
+                                    <input class="input--style-6" type="text" name="No_NPWP" id="No_NPWP" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">No HP</div>
+                            <label class="name" for="No_HP">No HP</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="No_HP">
+                                    <input class="input--style-6" type="text" name="No_HP" id="No_HP" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">No Telepon Kerluarga</div>
+                            <label class="name" for="No_Telepon_Keluarga">No Telepon Kerluarga</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="No_Telepon_Keluarga">
+                                    <input class="input--style-6" type="text" name="No_Telepon_Keluarga" id="No_Telpon_Keluarga" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Nama Kerluarga</div>
+                            <label class="name" for="Nama_Keluarga">Nama Kerluarga</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="Nama_Keluarga">
+                                    <input class="input--style-6" type="text" name="Nama_Keluarga" id="Nama_Keluarga" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Email</div>
+                            <label class="name" for="Email">Email</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="email" name="Email">
+                                    <input class="input--style-6" type="email" name="Email" id="Email" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Witel/Area</div>
                             <div class="value">
-                                <label for="Witel"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Witel" id="Witel" required>
+                                <label for="id_witel"><i class="zmdi zmdi-filter-list"></i></label>
+                                <select class="form-select" aria-label="Default select example" name="id_witel" id="id_witel" required="required">
                                     <option selected>Witel</option>
                                     <option value="1">Witel Denpasar</option>
                                     <option value="2">Witel Gresik</option>
@@ -171,19 +172,19 @@
                         <div class="form-row">
                             <div class="name">Status Naker</div>
                             <div class="value">
-                                <label for="Status_Naker"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Status_Naker" id="Status_Naker" required>
+                                <label for="status_naker"><i class="zmdi zmdi-filter-list"></i></label>
+                                <select class="form-select" aria-label="Default select example" name="status_naker" id="status_naker" required="required">
                                     <option selected>Status</option>
                                     <option value="1">Active</option>
-                                    <option value="2">Non Active</option>
+                                    <option value="0">Non Active</option>
                                   </select>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Direktorat</div>
                             <div class="value">
-                                <label for="Direktorat"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Direktorat" id="Direktorat" required>
+                                <label for="id_direktorat"><i class="zmdi zmdi-filter-list"></i></label>
+                                <select class="form-select" aria-label="Default select example" name="id_direktorat" id="id_direktorat" required="required">
                                     <option selected>Direktorat</option>
                                     <option value="1">Construction</option>
                                     <option value="2">Corporate Office Group</option>
@@ -198,7 +199,7 @@
                             <div class="name">Level Pendidikan</div>
                             <div class="value">
                                 <label for="Level_Pendidikan"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Level_Pendidikan" id="Level_Pendidikan" required>
+                                <select class="form-select" aria-label="Default select example" name="Level_Pendidikan" id="Level_Pendidikan" required="required">
                                     <option selected>Level Pendidikan</option>
                                     <option value="30">SMA</option>
                                     <option value="34">STM</option>
@@ -220,55 +221,39 @@
                             <div class="name">Posisi</div>
                             <div class="value">
                                 <label for="Posisi"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Posisi" id="Posisi" required>
+                                <select class="form-select" aria-label="Default select example" name="Posisi" id="Posisi" required="required">
                                     <option selected>Posisi</option>
-                                    <option value="1">Teknisi Provisioning</option>
-                                    <option value="2">Teknisi Migrasi</option>
-                                    <option value="3">Teknisi Wilsus</option>
-                                    <option value="4">Teknisi IOAN</option>
-                                    <option value="5">Teknisi BGES Serices</option>
+                                    <option value="Teknisi Provisioning">Teknisi Provisioning</option>
+                                    <option value="Teknisi Migrasi">Teknisi Migrasi</option>
+                                    <option value="Teknisi Wilsus">Teknisi Wilsus</option>
+                                    <option value="Teknisi IOAN">Teknisi IOAN</option>
+                                    <option value="Teknisi BGES Serices">Teknisi BGES Serices</option>
                                   </select>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Supplier ID</div>
+                            <label class="name" for="Tanggal_Pengajuan">Tanggal Pengajuan</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="Supplier_ID">
+                                    <input class="input--style-6" type="date" name="Tanggal_Pengajuan" id="Tanggal_Pengajuan" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Nama Mitra</div>
+                            <label class="name" for="NIK_Waspag_TA">NIK Waspag TA</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="Nama_Mitra">
+                                    <input class="input--style-6" type="text" name="NIK_Waspag_TA" id="NIK_Waspag_TA" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Tanggal Pengajuan</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="date" name="Tanggal_Pengajuan">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">NIK Waspag TA</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="text" name="NIK_Waspag_TA">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Regional</div>
+                            <label class="name" for="Regional">Regional</label>
                             <div class="value">
                                 <label for="Regional"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Regional" id="Regional" required>
+                                <select class="form-select" aria-label="Default select example" name="Regional" id="Regional" required="required">
                                     <option selected>Regional</option>
-                                    <option value="1">Jatim Bali Nusra</option>
+                                    <option value="Jatim Bali Nusra">Jatim Bali Nusra</option>
                                   </select>
                             </div>
                         </div>
@@ -276,35 +261,35 @@
                             <div class="name">Status Kepegawaian</div>
                             <div class="value">
                                 <label for="Status_Kepegawaian"><i class="zmdi zmdi-filter-list"></i></label>
-                                <select class="form-select" aria-label="Default select example" name="Status_Kepegawaian" id="Status_Kepegawaian" required>
+                                <select class="form-select" aria-label="Default select example" name="Status_Kepegawaian" id="Status_Kepegawaian" required="required">
                                     <option selected>Status Kepegawaian</option>
-                                    <option value="1">Kontrak</option>
-                                    <option value="1">Tetap</option>
+                                    <option value="Kontrak">Kontrak</option>
+                                    <option value="Tetap">Tetap</option>
                                   </select>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Tanggal Mulai Kontrak</div>
+                            <label class="name" for="Tanggal_Mulai_Kontrak">Tanggal Mulai Kontrak</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="Tanggal_Mulai_Kontrak">
+                                    <input class="input--style-6" type="date" name="Tanggal_Mulai_Kontrak" id="Tanggal_Mulai_Kontrak" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Tanggal Berakhir Kontrak</div>
+                            <label class="name">Tanggal Berakhir Kontrak</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="Tanggal_Berakhir_Kontrak">
+                                    <input class="input--style-6" type="date" name="Tanggal_Berakhir_Kontrak" id="Tanggal_Akhir_Kontrak" required="required">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Upload Kontrak Kerja</div>
+                            <div class="name" >Upload Kontrak Kerja</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="Upload_Kontrak_Kerja" id="file">
-                                    <label class="label--file" for="file">Pilih file</label>
+                                    <input class="input-file" type="file" name="Kontrak_Kerja" id="Kontrak_Kerja" required="required">
+                                    <label class="label--file" for="Kontrak_Kerja">Pilih file</label>
                                     <span class="input-file__info">Tidak ada file terpilih</span>
                                 </div>
                                 <div class="label--desc">Unggah file Kontrak Kerja</div>
