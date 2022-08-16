@@ -16,6 +16,8 @@ class NakerController extends Controller
     {
         //
         // $data = Naker::all();
+        // dd($data);
+        // return view('dashboard.Admin.dashboard', compact('data'));
     }
 
     /**

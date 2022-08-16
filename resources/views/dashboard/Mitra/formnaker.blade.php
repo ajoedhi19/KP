@@ -290,16 +290,16 @@
                                 <div class="input-group js-input-file">
                                     <input class="input-file" type="file" name="Kontrak_Kerja" id="Kontrak_Kerja" required="required">
                                     <label class="label--file" for="Kontrak_Kerja">Pilih file</label>
-                                    <span class="input-file__info">Tidak ada file terpilih</span>
+                                    
                                 </div>
                                 <div class="label--desc">Unggah file Kontrak Kerja</div>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <button class="btn btn--radius-2 btn--blue-2" type="submit">Tambah Tenaga Kerja</button>
+                        </div>
                     </form>
                     
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Tambah Tenaga Kerja</button>
                 </div>
             </div>
         </div>
