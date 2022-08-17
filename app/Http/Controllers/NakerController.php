@@ -59,6 +59,9 @@ class NakerController extends Controller
             "id_direktorat"=>$request["id_direktorat"],
             "Level_Pendidikan"=>$request["Level_Pendidikan"],
             "Posisi"=>$request["Posisi"],
+
+            "id_mitra"=>$request["id_mitra"]??0,
+            
             "Tanggal_Pengajuan"=>$request["Tanggal_Pengajuan"],
             "NIK_Waspag_TA"=>$request["NIK_Waspag_TA"],
             "Regional"=>$request["Regional"],

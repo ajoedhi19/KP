@@ -77,7 +77,7 @@
                             <label class="name" for="No_KTP">No KTP</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="No_KTP" id="No_KTP" required="required">
+                                    <input class="input--style-6" type="text" name="No_KTP" id="No_KTP" required="required">
                                 </div>
                             </div>
                         </div>
@@ -85,9 +85,9 @@
                             <label class="name" for="Foto_KTP">Upload KTP</label>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="Foto_KTP" id="Foto_KTP" required="required">
-                                    <label class="label--file" for="Foto_KTP">Pilih file</label>
-                                    <span class="input-file__info">Tidak ada file terpilih</span>
+                                    <input class="label--file" type="file" name="Foto_KTP" id="Foto_KTP" required="required">
+                                    <label class="input-file" for="Foto_KTP">Pilih file</label>
+                                    
                                 </div>
                                 <div class="label--desc">Unggah file KTP</div>
                             </div>
@@ -125,10 +125,10 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <label class="name" for="No_Telepon_Keluarga">No Telepon Kerluarga</label>
+                            <label class="name" for="No_Telpon_Keluarga">No Telepon Kerluarga</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="No_Telepon_Keluarga" id="No_Telpon_Keluarga" required="required">
+                                    <input class="input--style-6" type="text" name="No_Telpon_Keluarga" id="No_Telpon_Keluarga" required="required">
                                 </div>
                             </div>
                         </div>
@@ -175,8 +175,8 @@
                                 <label for="status_naker"><i class="zmdi zmdi-filter-list"></i></label>
                                 <select class="form-select" aria-label="Default select example" name="status_naker" id="status_naker" required="required">
                                     <option selected>Status</option>
-                                    <option value="1">Active</option>
-                                    <option value="0">Non Active</option>
+                                    <option value=true>Active</option>
+                                    <option value=false>Non Active</option>
                                   </select>
                             </div>
                         </div>
@@ -201,19 +201,19 @@
                                 <label for="Level_Pendidikan"><i class="zmdi zmdi-filter-list"></i></label>
                                 <select class="form-select" aria-label="Default select example" name="Level_Pendidikan" id="Level_Pendidikan" required="required">
                                     <option selected>Level Pendidikan</option>
-                                    <option value="30">SMA</option>
-                                    <option value="34">STM</option>
-                                    <option value="40">D1</option>
-                                    <option value="42">D2</option>
-                                    <option value="34">D3</option>
-                                    <option value="50">S1</option>
-                                    <option value="60">S2</option>
-                                    <option value="61">SMK</option>
-                                    <option value="62">MAN</option>
-                                    <option value="63">SMP</option>
-                                    <option value="64">SD</option>
-                                    <option value="65">SMEA</option>
-                                    <option value="66">D4</option>
+                                    <option value="1">SMA</option>
+                                    <option value="2">STM</option>
+                                    <option value="3">D1</option>
+                                    <option value="4">D2</option>
+                                    <option value="5">D3</option>
+                                    <option value="6">S1</option>
+                                    <option value="7">S2</option>
+                                    <option value="8">SMK</option>
+                                    <option value="9">MAN</option>
+                                    <option value="10">SMP</option>
+                                    <option value="11">SD</option>
+                                    <option value="12">SMEA</option>
+                                    <option value="13">D4</option>
                                   </select>
                             </div>
                         </div>
@@ -222,7 +222,7 @@
                             <div class="value">
                                 <label for="Posisi"><i class="zmdi zmdi-filter-list"></i></label>
                                 <select class="form-select" aria-label="Default select example" name="Posisi" id="Posisi" required="required">
-                                    <option selected>Posisi</option>
+                                    <option selected>Pilih Posisi</option>
                                     <option value="Teknisi Provisioning">Teknisi Provisioning</option>
                                     <option value="Teknisi Migrasi">Teknisi Migrasi</option>
                                     <option value="Teknisi Wilsus">Teknisi Wilsus</option>
@@ -263,8 +263,8 @@
                                 <label for="Status_Kepegawaian"><i class="zmdi zmdi-filter-list"></i></label>
                                 <select class="form-select" aria-label="Default select example" name="Status_Kepegawaian" id="Status_Kepegawaian" required="required">
                                     <option selected>Status Kepegawaian</option>
-                                    <option value="Kontrak">Kontrak</option>
-                                    <option value="Tetap">Tetap</option>
+                                    <option value="1">Kontrak</option>
+                                    <option value="2">Tetap</option>
                                   </select>
                             </div>
                         </div>
@@ -277,10 +277,10 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <label class="name">Tanggal Berakhir Kontrak</label>
+                            <label class="name" for="Tanggal_Akhir_Kontrak">Tanggal Berakhir Kontrak</label>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="Tanggal_Berakhir_Kontrak" id="Tanggal_Akhir_Kontrak" required="required">
+                                    <input class="input--style-6" type="date" name="Tanggal_Akhir_Kontrak" id="Tanggal_Akhir_Kontrak" required="required">
                                 </div>
                             </div>
                         </div>
@@ -288,8 +288,8 @@
                             <div class="name" >Upload Kontrak Kerja</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="Kontrak_Kerja" id="Kontrak_Kerja" required="required">
-                                    <label class="label--file" for="Kontrak_Kerja">Pilih file</label>
+                                    <input class="label--file" type="file" name="Kontrak_Kerja" id="Kontrak_Kerja" placeholder="Pilih File" required="required">
+                                    {{-- <label class="label--file" for="Kontrak_Kerja">Pilih file</label> --}}
                                     
                                 </div>
                                 <div class="label--desc">Unggah file Kontrak Kerja</div>

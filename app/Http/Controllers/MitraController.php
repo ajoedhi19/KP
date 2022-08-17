@@ -15,9 +15,7 @@ class MitraController extends Controller
      */
     public function index()
     {
-        $data = Mitra::all();
-        // dd($data);
-        return view('dashboard.Admin.dashboard', compact('data'));
+        //
     }
 
     /**

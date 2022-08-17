@@ -9,9 +9,11 @@ class Naker extends Model
 {
     use HasFactory;
 
-    private $table = "nakers";
+    protected $table = "nakers";
     protected $guarded = ["id"];
-
+    protected $cast = [
+        'status_naker' => 'boolean'
+    ];
     public function direktorat()
     {
         return $this->belongsTo(Direktorat::class,'foreign_key');
