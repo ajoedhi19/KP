@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/">Akmal | Blog</a>
+      <a class="navbar-brand" href="/">Telkom Akses</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -14,7 +14,7 @@
         <ul class="navbar-nav ms-auto">
           @auth
           <li class="nav-item dropdown">
-            <a class="nav-link" href="/" role="button" id="navbarDropdown" data-bs-toggle="dropdown-menu" aria-expanded="false" data-bs-target="dropdown-menu">
+            <a class="nav-link" href="/dashboard/mitra" role="button" id="navbarDropdown" data-bs-toggle="dropdown-menu" aria-expanded="false" data-bs-target="dropdown-menu">
               Welcome Back, {{ auth()->user()->nama_mitra }}
             </a>
           </li>

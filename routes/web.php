@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
+use PHPUnit\Framework\RiskyTestError;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,10 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware("guest");
-Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout']);
+
+
+Route::get('/dashboard/mitra', [DashboardController::class, 'index'])->name('dashboard.mitra')->middleware('isadmin');
+
+Route::get('admin/home', [DashboardController::class, 'adminHome'])->name('admin.home')->middleware('isadmin');

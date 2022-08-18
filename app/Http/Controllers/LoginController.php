@@ -21,15 +21,17 @@ class LoginController extends Controller
         ]);
 
  
-        if (Auth::attempt($credentials)) {
-            // $request->session()->regenerate();
- 
-            return redirect()->intended('/');
+        if(auth()->attempt($credentials))
+        {
+            if (auth()->user()->Role == 0) {
+                return redirect()->route('dashboard.mitra');
+            }else{
+                return redirect()->route('admin.home');
+            }
+        }else{
+            return redirect()->route('login')
+                ->with('error','Email-Address And Password Are Wrong.');
         }
- 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
     }
 
     public function logout(Request $request)
