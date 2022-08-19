@@ -25,7 +25,12 @@ class LoginController extends Controller
         {
             if (auth()->user()->Role == 0) {
                 return redirect()->route('dashboard.mitra');
-            }else{
+            
+            }
+            else if(auth()->user()->Role == 2){
+                return redirect()->route('procurement.home');;
+            }
+            else{
                 return redirect()->route('admin.home');
             }
         }else{
@@ -39,6 +44,6 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/login');
     }
 }

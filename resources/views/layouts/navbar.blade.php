@@ -14,7 +14,7 @@
         <ul class="navbar-nav ms-auto">
           @auth
           <li class="nav-item dropdown">
-            <a class="nav-link" href="/dashboard/mitra" role="button" id="navbarDropdown" data-bs-toggle="dropdown-menu" aria-expanded="false" data-bs-target="dropdown-menu">
+            <a class="nav-link" id="navbarDropdown" data-bs-toggle="dropdown-menu" aria-expanded="false" data-bs-target="dropdown-menu">
               Welcome Back, {{ auth()->user()->nama_mitra }}
             </a>
           </li>

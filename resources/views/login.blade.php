@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">Login</h2>
                         <form method="POST" class="login-form" id="login-form" action="/login">
                             @csrf
                             <div class="form-group">
@@ -38,18 +38,10 @@
                                 <input type="password" name="password" id="password" placeholder="Password"/>
                             </div>
                             <div class="form-group form-button">
-                                <button type="submit" name="signup" id="signup" class="form-submit" >Login</button>
+                                <button  type="submit" name="signup" id="signup" class="form-submit" >Login</button>
                             </div>
                         </form>
-                        <div class="social-login">
-                            <span class="social-label">Or login with</span>
-                            <ul class="socials">
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                     </div>
                 </div>
             </div>
         </section>

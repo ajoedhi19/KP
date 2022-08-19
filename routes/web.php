@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware("guest");
+Route::get('/login', [LoginController::class, 'index'])->middleware("guest");
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout']);
 
@@ -31,3 +31,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard/mitra', [DashboardController::class, 'index'])->name('dashboard.mitra')->middleware('isadmin');
 
 Route::get('admin/home', [DashboardController::class, 'adminHome'])->name('admin.home')->middleware('isadmin');
+
+
+Route::get('procurement/home', [DashboardController::class, 'procurementHome'])->name('procurement.home')->middleware('isadmin');
+
+Route::get('procurement/edit', [DashboardController::class, 'procurementEdit'])->name('procurement.edit')->middleware('isadmin');
