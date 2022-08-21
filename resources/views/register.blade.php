@@ -33,8 +33,8 @@
                                 <label for="Jenis_KHS"><i class="zmdi zmdi-filter-list"></i></label>
                                 <select class="form-select" aria-label="Default select example" name="Jenis_KHS" id="Jenis_KHS" required>
                                     <option selected>Jenis KHS</option>
-                                    <option value="1">KHS</option>
-                                    <option value="2">IOAN</option>
+                                    <option value="KHS">KHS</option>
+                                    <option value="IOAN">IOAN</option>
                                   </select>
                             </div>
                             <div class="form-group">

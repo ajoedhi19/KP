@@ -42,9 +42,16 @@ class DashboardController extends Controller
         // return view('procurement/home')->with('mitra', $data['mitra']);
     }
 
-    public function procurementEdit()
+    public function procurementEdit($id)
     {
-        return view('procurement/edit');
+        $data = User::findorfail($id);
+        return view('procurement/edit', compact('data'));
+    }
+    public function procurementStore(Request $request, $id)
+    {
+        $data = User::findorfail($id);
+        $data->update($request->all());
+        return redirect()->route('procurement.home');
     }
 
     

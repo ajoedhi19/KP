@@ -28,7 +28,7 @@ class LoginController extends Controller
             
             }
             else if(auth()->user()->Role == 2){
-                return redirect()->route('procurement.home');;
+                return redirect()->route('procurement.home');
             }
             else{
                 return redirect()->route('admin.home');

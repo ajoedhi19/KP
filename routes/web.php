@@ -33,6 +33,7 @@ Route::get('/dashboard/mitra', [DashboardController::class, 'index'])->name('das
 Route::get('admin/home', [DashboardController::class, 'adminHome'])->name('admin.home')->middleware('isadmin');
 
 
-Route::get('procurement/home', [DashboardController::class, 'procurementHome'])->name('procurement.home')->middleware('isadmin');
+Route::get('procurement/', [DashboardController::class, 'procurementHome'])->name('procurement.home')->middleware('isadmin');
 
-Route::get('procurement/edit', [DashboardController::class, 'procurementEdit'])->name('procurement.edit')->middleware('isadmin');
+Route::get('procurement/edit/{id}', [DashboardController::class, 'procurementEdit'])->name('procurement.edit')->middleware('isadmin');
+Route::post('procurement/edit/{id}', [DashboardController::class, 'procurementStore'])->name('procurement.store')->middleware('isadmin');
