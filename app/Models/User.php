@@ -34,6 +34,8 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected $table = 'users';
     protected $attributes = [
         "Jumlah_Minimal_Naker" => 0
     ]; 
@@ -47,7 +49,11 @@ class User extends Authenticatable
     ];
 
     public function getAuthPassword()
-{
+    {
     return $this->password;
-}
+    }
+    public function naker()
+    {
+        return $this->hasMany(Naker::class);
+    }
 }

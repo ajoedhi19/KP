@@ -29,15 +29,12 @@ return new class extends Migration
             $table->string('No_Telpon_Keluarga');
             $table->string('Nama_Keluarga');
             $table->string('Email');
-            $table->unsignedInteger('id_witel');
-            $table->foreign('id_witel')->references('id')->on('witels');
+            $table->string('witel');
             $table->boolean('status_naker');
-            $table->unsignedInteger('id_direktorat');
-            $table->foreign('id_direktorat')->references('id')->on('direktorats');
+            $table->string('direktorat');
             $table->unsignedInteger('Level_Pendidikan');
             $table->string('Posisi');
-            $table->unsignedInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedInteger('user_id');
             $table->date('Tanggal_Pengajuan');
             $table->string('NIK_Waspag_TA');
             $table->string('Regional')->default('Jatim Bali Nusra');
@@ -46,6 +43,12 @@ return new class extends Migration
             $table->date('Tanggal_Akhir_Kontrak');
             $table->binary('Kontrak_Kerja');
             $table->timestamps();
+
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 

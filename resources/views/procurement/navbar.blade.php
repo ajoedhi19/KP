@@ -13,9 +13,15 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="..">
+        <a class="nav-link" href="{{ url('procurement') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ url('procurement/mitra') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Daftar Mitra</span></a>
     </li>
 
     <!-- Divider -->

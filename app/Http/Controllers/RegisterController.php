@@ -15,7 +15,29 @@ class RegisterController extends Controller
     
     public function store(Request $request)
     {
+        
+        // $validatedData = $request->validate([
+        //     'nama_mitra' => 'required|unique',
+        //     'Jenis_KHS' => 'required',
+        //     'Nomor_KHS' => 'required',
+        //     'Tanggal_Berakhir_KHS' => 'required',
+        //     'Nama_Penanggung_Jawab' => 'required',
+        //     'email' => 'required|email|unique:users',
+        //     'No_HP' => 'required',
+        //     'Alamat_Penanggung_Jawab' => 'required',
+        //     'No_Identitas' => 'required',
+        //     'No_Identitas' => 'required|unique:users',
+        //     'Foto_Identitas' => 'required',
+        //     'Jumlah_Minimal_Naker' => 0,
+        //     'password' => 'required',
+        //     'password' => 0,
+        // ]);
+
+        // dd($validatedData);
+
         $credit=$request["password"]=bcrypt($request["password"]);
+
+        // User::create($validatedData);
         $data = User::create([
             "nama_mitra"=>$request["nama_mitra"],
             "Jenis_KHS"=>$request["Jenis_KHS"],

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('Nomor_KHS', 20)->nullable();
             $table->date('Tanggal_Berakhir_KHS')->nullable();
             $table->string('Nama_Penanggung_Jawab')->nullable();
-            $table->string('email',255);
+            $table->string('email',255)->unique();
             $table->string('No_HP')->nullable();
             $table->string('Alamat_Penanggung_Jawab')->nullable();
             $table->string('No_Identitas',16)->nullable();
