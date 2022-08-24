@@ -16,10 +16,6 @@ use PHPUnit\Framework\RiskyTestError;
 |
 */
 
-Route::get('/test', function(){
-    return view('admin/master');
-});
-
 Route::get('/', function () {
     return view('home');
 });

@@ -235,9 +235,9 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <form action="post", method="/logout">
+                    <form action="/logout" method="POST">
                     @csrf
-                        <a href="/" class="btn btn-primary">Logout</a>
+                        <button type="submit"><a class="btn btn-primary">Logout</a></button>
                     </form>
                 </div>
             </div>
