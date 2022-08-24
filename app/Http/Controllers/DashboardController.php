@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Naker;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -110,6 +110,11 @@ class DashboardController extends Controller
         return redirect()->route('procurement.home');
     }
 
+    public function areaHome()
+    {
+        return view('area/home');
+    }
+
     public function mitraHome()
     {
         $data = Naker::where('user_id', auth()->user()->id)->get();
@@ -123,7 +128,6 @@ class DashboardController extends Controller
 
     public function mitraStore(Request $request)
     {
-
         // dd($request);
         $data = Naker::create([
             "Nama"=>$request["Nama"],

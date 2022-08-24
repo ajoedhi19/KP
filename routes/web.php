@@ -40,9 +40,10 @@ Route::delete('admin/destroy/{id}', [DashboardController::class, 'adminDestroy']
 
 Route::get('procurement/', [DashboardController::class, 'procurementHome'])->name('procurement.home')->middleware('isadmin');
 Route::get('procurement/mitra', [DashboardController::class, 'procurementMitra'])->name('procurement.mitra')->middleware('isadmin');
-
 Route::get('procurement/edit/{id}', [DashboardController::class, 'procurementEdit'])->name('procurement.edit')->middleware('isadmin');
 Route::post('procurement/edit/{id}', [DashboardController::class, 'procurementStore'])->name('procurement.store')->middleware('isadmin');
+
+Route::get('area/home', [DashboardController::class, 'areaHome'])->name('area.home')->middleware('isadmin');
 
 Route::get('mitra/home', [DashboardController::class, 'mitraHome'])->name('mitra.home')->middleware('ismitra');
 Route::get('mitra/tambah', [DashboardController::class, 'mitraTambah'])->name('mitra.tambah')->middleware('ismitra');
