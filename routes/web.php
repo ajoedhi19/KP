@@ -31,6 +31,11 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard/mitra', [DashboardController::class, 'index'])->name('dashboard.mitra')->middleware('isadmin');
 
 Route::get('admin/home', [DashboardController::class, 'adminHome'])->name('admin.home')->middleware('isadmin');
+Route::get('admin/tambah', [DashboardController::class, 'adminTambah'])->name('admin.tambah')->middleware('isadmin');
+Route::post('admin/tambah', [DashboardController::class, 'adminCreate'])->name('admin.create')->middleware('isadmin');
+Route::get('admin/edit/{id}', [DashboardController::class, 'adminEdit'])->name('admin.edit')->middleware('isadmin');
+Route::post('admin/edit/{id}', [DashboardController::class, 'adminStore'])->name('admin.store')->middleware('isadmin');
+Route::delete('admin/destroy/{id}', [DashboardController::class, 'adminDestroy'])->name('admin.destroy')->middleware('isadmin');
 
 
 Route::get('procurement/', [DashboardController::class, 'procurementHome'])->name('procurement.home')->middleware('isadmin');
@@ -41,4 +46,4 @@ Route::post('procurement/edit/{id}', [DashboardController::class, 'procurementSt
 
 Route::get('mitra/home', [DashboardController::class, 'mitraHome'])->name('mitra.home')->middleware('ismitra');
 Route::get('mitra/tambah', [DashboardController::class, 'mitraTambah'])->name('mitra.tambah')->middleware('ismitra');
-Route::post('mitra/tambah', [DashboardController::class, 'mitraCreate'])->name('mitra.create')->middleware('ismitra');
+Route::post('mitra/tambah', [DashboardController::class, 'mitraStore'])->name('mitra.store')->middleware('ismitra');
