@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('Nama');
             $table->date('Tanggal_Lahir');
             $table->string('Tempat_Lahir');
-            $table->unsignedInteger('Jenis_Kelamin');
+            $table->string('Jenis_Kelamin');
             $table->string('Alamat');
             $table->string('No_KTP');
             $table->binary('Foto_KTP');
@@ -38,7 +38,7 @@ return new class extends Migration
             $table->date('Tanggal_Pengajuan');
             $table->string('NIK_Waspag_TA');
             $table->string('Regional')->default('Jatim Bali Nusra');
-            $table->unsignedInteger('Status_Kepegawaian');
+            $table->string('Status_Kepegawaian');
             $table->date('Tanggal_Mulai_Kontrak');
             $table->date('Tanggal_Akhir_Kontrak');
             $table->binary('Kontrak_Kerja');

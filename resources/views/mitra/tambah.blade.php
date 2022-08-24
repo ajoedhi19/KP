@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-<form action="{{ url('mitra/tambah') }}" method="post">
+<form action="{{ url('mitra/tambah') }}" method="POST">
     @csrf
     <div class="form-group">
       <label for="Nama">nama</label>
@@ -30,7 +30,7 @@
       </div>
     <div class="form-group">
       <label for="No_KTP">Nomor KTP</label>
-      <input type="Text" class="form-control" id="Nomor_KTP" aria-describedby="emailHelp" placeholder="Nomor KTP" name="No_KTP">
+      <input type="Text" class="form-control" id="No_KTP" aria-describedby="emailHelp" placeholder="Nomor KTP" name="No_KTP">
     </div>
     <div class="form-group">
         <label for="Foto_KTP">Foto KTP</label>
@@ -38,23 +38,23 @@
     </div>
     <div class="form-group">
         <label for="No_KK">Nomor KK</label>
-        <input type="Text" class="form-control" id="Nomor_KK" aria-describedby="emailHelp" placeholder="Nomor KK" name="No_KK">
+        <input type="Text" class="form-control" id="No_KK" aria-describedby="emailHelp" placeholder="Nomor KK" name="No_KK">
     </div>
     <div class="form-group">
         <label for="No_Kartu_BPJS">Nomor Kartu BPJS</label>
-        <input type="Text" class="form-control" id="Nomor_Kartu_BPJS" aria-describedby="emailHelp" placeholder="Nomor Kartu BPJS" name="No_Kartu_BPJS">
+        <input type="Text" class="form-control" id="No_Kartu_BPJS" aria-describedby="emailHelp" placeholder="Nomor Kartu BPJS" name="No_Kartu_BPJS">
     </div>
     <div class="form-group">
         <label for="No_NPWP">Nomor NPWP</label>
-        <input type="Text" class="form-control" id="Nomor_NPWP" aria-describedby="emailHelp" placeholder="Nomor NPWP" name="No_NPWP">
+        <input type="Text" class="form-control" id="No_NPWP" aria-describedby="emailHelp" placeholder="Nomor NPWP" name="No_NPWP">
     </div>
     <div class="form-group">
         <label for="No_HP">Nomor HP</label>
-        <input type="Text" class="form-control" id="Nomor_HP" aria-describedby="emailHelp" placeholder="Nomor HP" name="No_HP">
+        <input type="Text" class="form-control" id="No_HP" aria-describedby="emailHelp" placeholder="Nomor HP" name="No_HP">
     </div>
     <div class="form-group">
         <label for="No_Telpon_Keluarga">Nomor Telpon Keluarga</label>
-        <input type="Text" class="form-control" id="Nomor_Telpon_Keluarga" aria-describedby="emailHelp" placeholder="Nomor Telpon Keluarga" name="No_Telpon_Keluarga">
+        <input type="Text" class="form-control" id="No_Telpon_Keluarga" aria-describedby="emailHelp" placeholder="Nomor Telpon Keluarga" name="No_Telpon_Keluarga">
     </div>
     <div class="form-group">
         <label for="Nama_Keluarga">Nama Keluarga</label>
@@ -83,11 +83,10 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="Status_Naker">Status Naker</label>
-        <select class="form-select" aria-label="Default select example" name="Status_Naker" id="Status_Naker" required="required">
-            <option selected>Status Naker</option>
-            <option value="Active">Active</option>
-            <option value="NonActive">Non Active</option>
+        <label for="status_naker">Status Naker</label>
+        <select class="form-select" aria-label="Default select example" name="status_naker" id="status_naker" required="required">
+            <option value=1 @if (old('active') == 1) selected @endif>Active</option>
+            <option value=0 @if (old('active') == 0) selected @endif>Non Active</option>
         </select>
     </div>
     <div class="form-group">
@@ -160,8 +159,8 @@
         <input type="date" class="form-control" id="Tanggal_Mulai_Kontrak" aria-describedby="emailHelp" placeholder="Tanggal Mulai Kontrak" name="Tanggal_Mulai_Kontrak" autofocus >
     </div>
     <div class="form-group">
-      <label for="Tanggal_Berakhir_Kontrak">Tanggal Berakhir Kontrak</label>
-      <input type="date" class="form-control" id="Tanggal_Berakhir_Kontrak" aria-describedby="emailHelp" placeholder="Tanggal Berakhir Kontrak" name="Tanggal_Berakhir_Kontrak" >
+      <label for="Tanggal_Akhir_Kontrak">Tanggal Berakhir Kontrak</label>
+      <input type="date" class="form-control" id="Tanggal_Akhir_Kontrak" aria-describedby="emailHelp" placeholder="Tanggal Berakhir Kontrak" name="Tanggal_Akhir_Kontrak" >
     </div>
     <div class="form-group">
       <label for="Kontrak_Kerja">Kontrak Kerja</label>

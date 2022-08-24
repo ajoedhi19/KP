@@ -41,4 +41,4 @@ Route::post('procurement/edit/{id}', [DashboardController::class, 'procurementSt
 
 Route::get('mitra/home', [DashboardController::class, 'mitraHome'])->name('mitra.home')->middleware('ismitra');
 Route::get('mitra/tambah', [DashboardController::class, 'mitraTambah'])->name('mitra.tambah')->middleware('ismitra');
-Route::post('mitra/tambah', [DashboardController::class, 'mitraCreate'])->name('mitra.create')->middleware('ismitra');
+Route::post('mitra/tambah', [DashboardController::class, 'mitraStore'])->name('mitra.create')->middleware('ismitra');
