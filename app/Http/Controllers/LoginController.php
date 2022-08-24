@@ -33,6 +33,9 @@ class LoginController extends Controller
             else if(auth()->user()->Role == 2){
                 return redirect()->route('procurement.home');
             }
+            else if(auth()->user()->Role == 4){
+                return redirect()->route('area.home');
+            }          
             else if(auth()->user()->Role == 8){
                 return redirect()->route('mitra.home');
             }
