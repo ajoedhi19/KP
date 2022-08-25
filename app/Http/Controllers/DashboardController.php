@@ -112,7 +112,20 @@ class DashboardController extends Controller
 
     public function areaHome()
     {
-        return view('area/home');
+        $data = Naker::join('users', 'user_id', '=', 'users.id')
+        ->get();
+        return view('area/home', compact('data'));
+    }
+
+    public function areaEdit($id)
+    {
+        $data = Naker::findorfail($id);
+        return view('area/edit', compact('data'));
+    }
+    public function areaStore(Request $request, $id){
+        $data = Naker::findorfail($id);
+        $data->update($request->all());
+        return redirect()->route('area.home');
     }
 
     public function mitraHome()
@@ -128,6 +141,9 @@ class DashboardController extends Controller
 
     public function mitraStore(Request $request)
     {
+        $ktp=$request->file('Foto_KTP')->store('Foto_KTP');
+        // $ktp=$request->file('Foto_KTP')->store('Foto_KTP');
+        $kontrak=$request->file('Kontrak_Kerja')->store('Kontrak_Kerja');
         // dd($request);
         $data = Naker::create([
             "Nama"=>$request["Nama"],
@@ -136,7 +152,7 @@ class DashboardController extends Controller
             "Jenis_Kelamin"=>$request["Jenis_Kelamin"],
             "Alamat"=>$request["Alamat"],
             "No_KTP"=>$request["No_KTP"],
-            "Foto_KTP"=>$request["Foto_KTP"],
+            "Foto_KTP"=>$ktp,
             "No_KK"=>$request["No_KK"],
             "No_Kartu_BPJS"=>$request["No_Kartu_BPJS"],
             "No_NPWP"=>$request["No_NPWP"],
@@ -156,10 +172,26 @@ class DashboardController extends Controller
             "Status_Kepegawaian"=>$request["Status_Kepegawaian"],
             "Tanggal_Mulai_Kontrak"=>$request["Tanggal_Mulai_Kontrak"],
             "Tanggal_Akhir_Kontrak"=>$request["Tanggal_Akhir_Kontrak"],
-            "Kontrak_Kerja"=>$request["Kontrak_Kerja"]
+            "Kontrak_Kerja"=>$kontrak,
+            "Roles"=>$request["Roles"]??0
         ]);
         return redirect('/mitra/home');
     }
-
+    public function mitraEdit($id)
+    {
+        $data = Naker::findorfail($id);
+        return view('mitra/edit', compact('data'));
+    }
+    public function mitraUpdate(Request $request, $id){
+        $data = Naker::findorfail($id);
+        $data->update($request->all());
+        return redirect()->route('mitra.home');
+    }
+    public function mitraDestroy($id)
+    {
+        Naker::destroy($id);
+      return redirect()->back()
+    ->with('success','Naker deleted successfully');
+    }
     
 }

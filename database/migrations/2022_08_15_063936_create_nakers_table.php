@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('Jenis_Kelamin');
             $table->string('Alamat');
             $table->string('No_KTP');
-            $table->binary('Foto_KTP');
+            $table->string('Foto_KTP');
             $table->string('No_KK');
             $table->string('No_Kartu_BPJS');
             $table->string('No_NPWP');
@@ -32,7 +32,7 @@ return new class extends Migration
             $table->string('witel');
             $table->boolean('status_naker');
             $table->string('direktorat');
-            $table->unsignedInteger('Level_Pendidikan');
+            $table->string('Level_Pendidikan');
             $table->string('Posisi');
             $table->unsignedInteger('user_id');
             $table->date('Tanggal_Pengajuan');
@@ -41,7 +41,8 @@ return new class extends Migration
             $table->string('Status_Kepegawaian');
             $table->date('Tanggal_Mulai_Kontrak');
             $table->date('Tanggal_Akhir_Kontrak');
-            $table->binary('Kontrak_Kerja');
+            $table->string('Kontrak_Kerja');
+            $table->integer('Roles');
             $table->timestamps();
 
 

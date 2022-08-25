@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up</title>
+    <title>Register</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -23,7 +23,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form action="/register" method="POST" class="register-form" id="register-form">
+                        <form action="/register" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="nama_mitra"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -65,7 +65,7 @@
                                 <input type="text" name="No_Identitas" id="No_Identitas" placeholder="No Identitas" required="required"/>
                             </div>
                             <div class="form-group">
-                                <label for="foto-identitas"><i class="zmdi zmdi-image"></i></label>
+                                <label for="Foto-identitas"><i class="zmdi zmdi-image"></i></label>
                                 <input type="file" name="Foto_Identitas" id="Foto_Identitas" placeholder="Foto Identitas" required="required"/>
                             </div>
                             <div class="form-group">

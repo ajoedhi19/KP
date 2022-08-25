@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-<form action="{{ url('procurement/edit',$data->id) }}" method="post">
+<form action="{{ url('procurement/edit',$data->id) }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
       <label for="nama_mitra">Nama Mitra</label>
@@ -42,7 +42,7 @@
     </div>
     <div class="form-group">
       <label for="Foto_Identitas">Foto Identitas</label>
-      <input type="Text" class="form-control" id="Foto_Identitas" aria-describedby="emailHelp" placeholder="Foto Identitas" name="Foto_Identitas" value={{ old('Foto_Identitas' ,$data->Foto_Identitas) }}>
+      <input type="file" class="form-control" id="Foto_Identitas" aria-describedby="emailHelp" placeholder="Foto Identitas" name="Foto_Identitas" value={{ old('No_Identitas' ,$data->No_Identitas) }}>
     </div>
     <div class="form-group">
       <label for="Jumlah_Minimal_Naker">Jumlah Minimal Naker</label>
@@ -51,7 +51,6 @@
     <div class="form-group">
       <label for="Role">Status</label>
       <select class="form-select" aria-label="Default select example" name="Role" id="Role" required value={{ old('Role' ,$data->Role) }}>
-          <option selected>Status Mitra</option>
           <option value="0">Ditolak</option>
           <option value="8">Disetujui</option>
         </select>

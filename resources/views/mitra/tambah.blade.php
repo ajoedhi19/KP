@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-<form action="{{ url('mitra/tambah') }}" method="POST">
+<form action="{{ url('mitra/tambah') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
       <label for="Nama">nama</label>
@@ -105,19 +105,19 @@
         <label for="Level_Pendidikan">Level Pendidikan</label>
             <select class="form-select" aria-label="Default select example" name="Level_Pendidikan" id="Level_Pendidikan" required="required">
             <option selected>Level Pendidikan</option>
-            <option value="1">SMA</option>
-            <option value="2">STM</option>
-            <option value="3">D1</option>
-            <option value="4">D2</option>
-            <option value="5">D3</option>
-            <option value="6">S1</option>
-            <option value="7">S2</option>
-            <option value="8">SMK</option>
-            <option value="9">MAN</option>
-            <option value="10">SMP</option>
-            <option value="11">SD</option>
-            <option value="12">SMEA</option>
-            <option value="13">D4</option>
+            <option value="SMA">SMA</option>
+                    <option value="STM">STM</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="SMK">SMK</option>
+                    <option value="MAN">MAN</option>
+                    <option value="SMP">SMP</option>
+                    <option value="SD">SD</option>
+                    <option value="SMEA">SMEA</option>
+                    <option value="D4">D4</option>
         </select>
     </div>
     <div class="form-group">

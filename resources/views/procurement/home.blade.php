@@ -50,7 +50,7 @@
                         <td>{{$isi->No_HP}}</td>
                         <td>{{$isi->Alamat_Penanggung_Jawab}}</td>
                         <td>{{$isi->No_Identitas}}</td>
-                        <td>{{$isi->Foto_Identitas}}</td>
+                        <td><a href="{{ asset('storage/' . $isi->Foto_Identitas) }}" ><img style="max-height:100px; max-width:100px;" src="{{ asset('storage/' . $isi->Foto_Identitas) }}" alt="{{ $isi->Foto_Identitas }}"></a></td>
                         <td>{{$isi->Jumlah_Minimal_Naker}}</td>
                         <td><button class = "btn btn-danger">Belum Diverifikasi</button></td>
                         <td>

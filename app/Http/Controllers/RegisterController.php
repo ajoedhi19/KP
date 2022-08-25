@@ -35,6 +35,8 @@ class RegisterController extends Controller
 
         // dd($validatedData);
 
+        $foto=$request->file('Foto_Identitas')->store('Foto_Identitas');
+
         $credit=$request["password"]=bcrypt($request["password"]);
 
         // User::create($validatedData);
@@ -48,7 +50,7 @@ class RegisterController extends Controller
             "No_HP"=>$request["No_HP"],
             "Alamat_Penanggung_Jawab"=>$request["Alamat_Penanggung_Jawab"],
             "No_Identitas"=>$request["No_Identitas"],
-            "Foto_Identitas"=>$request["Foto_Identitas"],
+            "Foto_Identitas"=>$foto,
             "Jumlah_Minimal_Naker"=>$request["Jumlah_Minimal_Naker"]??0,
             "password"=>$credit,
             "Role"=>$request["Role"]??0

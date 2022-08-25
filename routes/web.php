@@ -44,7 +44,12 @@ Route::get('procurement/edit/{id}', [DashboardController::class, 'procurementEdi
 Route::post('procurement/edit/{id}', [DashboardController::class, 'procurementStore'])->name('procurement.store')->middleware('isadmin');
 
 Route::get('area/home', [DashboardController::class, 'areaHome'])->name('area.home')->middleware('isadmin');
+Route::get('area/edit/{id}', [DashboardController::class, 'areaEdit'])->name('area.edit')->middleware('isadmin');
+Route::post('area/edit/{id}', [DashboardController::class, 'areaStore'])->name('area.store')->middleware('isadmin');
 
 Route::get('mitra/home', [DashboardController::class, 'mitraHome'])->name('mitra.home')->middleware('ismitra');
 Route::get('mitra/tambah', [DashboardController::class, 'mitraTambah'])->name('mitra.tambah')->middleware('ismitra');
 Route::post('mitra/tambah', [DashboardController::class, 'mitraStore'])->name('mitra.store')->middleware('ismitra');
+Route::get('mitra/edit/{id}', [DashboardController::class, 'mitraEdit'])->name('mitra.edit')->middleware('ismitra');
+Route::post('mitra/edit/{id}', [DashboardController::class, 'mitraUpdate'])->name('mitra.Update')->middleware('ismitra');
+Route::delete('mitra/destroy/{id}', [DashboardController::class, 'mitraDestroy'])->name('mitra.destroy')->middleware('ismitra');
