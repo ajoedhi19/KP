@@ -33,6 +33,9 @@ class LoginController extends Controller
             else if(auth()->user()->Role == 2){
                 return redirect()->route('procurement.home');
             }
+            else if(auth()->user()->Role == 3){
+                return redirect()->route('regional.home');
+            }   
             else if(auth()->user()->Role == 4){
                 return redirect()->route('area.home');
             }          
@@ -40,7 +43,7 @@ class LoginController extends Controller
                 return redirect()->route('mitra.home');
             }
             else{
-                return redirect()->route('admin.home');
+                return redirect()->route('dashboard.mitra');
             }
         }else{
             return redirect()->route('login')

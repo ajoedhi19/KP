@@ -47,6 +47,10 @@ Route::get('area/home', [DashboardController::class, 'areaHome'])->name('area.ho
 Route::get('area/edit/{id}', [DashboardController::class, 'areaEdit'])->name('area.edit')->middleware('isadmin');
 Route::post('area/edit/{id}', [DashboardController::class, 'areaStore'])->name('area.store')->middleware('isadmin');
 
+Route::get('regional/home', [DashboardController::class, 'regionalHome'])->name('regional.home')->middleware('isadmin');
+Route::get('regional/edit/{id}', [DashboardController::class, 'regionaledit'])->name('regional.edit')->middleware('isadmin');
+Route::post('regional/edit/{id}', [DashboardController::class, 'regionalstore'])->name('regional.store')->middleware('isadmin');
+
 Route::get('mitra/home', [DashboardController::class, 'mitraHome'])->name('mitra.home')->middleware('ismitra');
 Route::get('mitra/tambah', [DashboardController::class, 'mitraTambah'])->name('mitra.tambah')->middleware('ismitra');
 Route::post('mitra/tambah', [DashboardController::class, 'mitraStore'])->name('mitra.store')->middleware('ismitra');

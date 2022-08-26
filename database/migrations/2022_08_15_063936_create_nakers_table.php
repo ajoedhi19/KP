@@ -43,6 +43,7 @@ return new class extends Migration
             $table->date('Tanggal_Akhir_Kontrak');
             $table->string('Kontrak_Kerja');
             $table->integer('Roles');
+            $table->string('NIK')->nullable();
             $table->timestamps();
 
 

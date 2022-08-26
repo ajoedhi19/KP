@@ -127,6 +127,23 @@ class DashboardController extends Controller
         $data->update($request->all());
         return redirect()->route('area.home');
     }
+    public function regionalHome(){
+        $data = Naker::join('users', 'user_id', '=', 'users.id')
+        ->where('Roles',1)
+        ->get();
+        return view('regional/home', compact('data'));
+    }
+
+    public function regionalEdit($id)
+    {
+        $data = Naker::findorfail($id);
+        return view('regional/edit', compact('data'));
+    }
+    public function regionalStore(Request $request, $id){
+        $data = Naker::findorfail($id);
+        $data->update($request->all());
+        return redirect()->route('regional.home');
+    }
 
     public function mitraHome()
     {
