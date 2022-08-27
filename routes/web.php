@@ -51,6 +51,12 @@ Route::get('regional/home', [DashboardController::class, 'regionalHome'])->name(
 Route::get('regional/edit/{id}', [DashboardController::class, 'regionaledit'])->name('regional.edit')->middleware('isadmin');
 Route::post('regional/edit/{id}', [DashboardController::class, 'regionalstore'])->name('regional.store')->middleware('isadmin');
 
+Route::get('tl/home', [DashboardController::class, 'tlHome'])->name('tl.home')->middleware('isadmin');
+
+Route::get('ss/home', [DashboardController::class, 'ssHome'])->name('ss.home')->middleware('isadmin');
+
+Route::get('fa/home', [DashboardController::class, 'faHome'])->name('fa.home')->middleware('isadmin');
+
 Route::get('mitra/home', [DashboardController::class, 'mitraHome'])->name('mitra.home')->middleware('ismitra');
 Route::get('mitra/tambah', [DashboardController::class, 'mitraTambah'])->name('mitra.tambah')->middleware('ismitra');
 Route::post('mitra/tambah', [DashboardController::class, 'mitraStore'])->name('mitra.store')->middleware('ismitra');

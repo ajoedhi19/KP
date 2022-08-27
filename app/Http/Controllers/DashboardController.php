@@ -210,5 +210,17 @@ class DashboardController extends Controller
       return redirect()->back()
     ->with('success','Naker deleted successfully');
     }
+
+    public function tlHome(){
+        return view('tl.home');
+    }
+
+    public function faHome(){
+        return view('fa.home');
+    }
+
+    public function ssHome(){
+        return view('ss.home');
+    }
     
 }

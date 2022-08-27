@@ -35,10 +35,20 @@ class LoginController extends Controller
             }
             else if(auth()->user()->Role == 3){
                 return redirect()->route('regional.home');
-            }   
+            }
             else if(auth()->user()->Role == 4){
                 return redirect()->route('area.home');
-            }          
+            }       
+            else if(auth()->user()->Role == 5){
+                return redirect()->route('fa.home');
+            }
+            else if(auth()->user()->Role == 6){
+                return redirect()->route('tl.home');
+            }
+            else if(auth()->user()->Role == 7){
+                return redirect()->route('ss.home');
+            }
+                  
             else if(auth()->user()->Role == 8){
                 return redirect()->route('mitra.home');
             }
