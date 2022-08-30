@@ -213,6 +213,7 @@ class DashboardController extends Controller
         $data = Naker::join('users', 'user_id', '=', 'users.id')
         ->where('Roles',1)
         ->select('*','nakers.id as na_id')
+        ->orderBy('na_id', 'DESC')
         ->get();
         return view('regional/home', compact('data'));
     }

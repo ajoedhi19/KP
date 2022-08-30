@@ -88,7 +88,7 @@
                         <td>{{ $isi->Status_Kepegawaian }}</td>
                         <td>{{ $isi->Tanggal_Mulai_Kontrak }}</td>
                         <td>{{ $isi->Tanggal_Akhir_Kontrak }}</td>
-                        <td><a href="{{ asset('storage/' . $isi->Kontrak_Kerja) }}" ><img style="max-height:100px; max-width:100px;" src="{{ asset('storage/' . $isi->Kontrak_Kerja) }}" alt="{{ $isi->Kontrak_Kerja }}"></a></td>
+                        <td><a href="{{ asset('storage/' . $isi->Kontrak_Kerja) }}" >Kontrak Kerja</a></td>
                         <td>
                             @if ( ($isi->Roles) == 0 )
                                 <button class = "btn btn-danger d-inline">Belum diverfikasi</button>
