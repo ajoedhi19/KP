@@ -33,7 +33,6 @@ class UserSeeder extends Seeder
             ['HR Area10', 'hrarea10@admin.com', '12345678',4],
             ['HR Area11', 'hrarea11@admin.com', '12345678',4],
             ['HR Area12', 'hrarea12@admin.com', '12345678',4],
-            ['HR Area13', 'hrarea13@admin.com', '12345678',4],
             ['FA1', 'fa1@admin.com', '12345678',5],
             ['FA2', 'fa2@admin.com', '12345678',5],
             ['FA3', 'fa3@admin.com', '12345678',5],

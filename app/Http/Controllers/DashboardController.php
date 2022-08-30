@@ -112,9 +112,79 @@ class DashboardController extends Controller
 
     public function areaHome()
     {
+        if(auth()->user()->id == 4){
         $data = Naker::join('users', 'user_id', '=', 'users.id')
+        ->where('witel', 'LIKE', '%'.'Denpasar'.'%')
         ->get();
         return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 5){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Gresik'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 6){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Jember'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 7){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Kediri'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 8){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Kupang'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 9){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Madiun'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 10){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Malang'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 11){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Mataram'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 12){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Pasuruan'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 13){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Sidoarjo'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 14){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Singaraja'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+        else if(auth()->user()->id == 15){
+            $data = Naker::join('users', 'user_id', '=', 'users.id')
+            ->where('witel', 'LIKE', '%'.'Surabaya'.'%')
+            ->get();
+            return view('area/home', compact('data'));
+        }
+
     }
 
     public function areaEdit($id)
@@ -141,6 +211,7 @@ class DashboardController extends Controller
     }
     public function regionalStore(Request $request, $id){
         $data = Naker::findorfail($id);
+        // dd($data);
         $data->update($request->all());
         return redirect()->route('regional.home');
     }
