@@ -115,72 +115,84 @@ class DashboardController extends Controller
         if(auth()->user()->id == 4){
         $data = Naker::join('users', 'user_id', '=', 'users.id')
         ->where('witel', 'LIKE', '%'.'Denpasar'.'%')
+        ->select('*','nakers.id as na_id')
         ->get();
         return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 5){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Gresik'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 6){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Jember'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 7){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Kediri'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 8){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Kupang'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 9){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Madiun'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 10){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Malang'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 11){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Mataram'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 12){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Pasuruan'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 13){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Sidoarjo'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 14){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Singaraja'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
         else if(auth()->user()->id == 15){
             $data = Naker::join('users', 'user_id', '=', 'users.id')
             ->where('witel', 'LIKE', '%'.'Surabaya'.'%')
+            ->select('*','nakers.id as na_id')
             ->get();
             return view('area/home', compact('data'));
         }
@@ -200,6 +212,7 @@ class DashboardController extends Controller
     public function regionalHome(){
         $data = Naker::join('users', 'user_id', '=', 'users.id')
         ->where('Roles',1)
+        ->select('*','nakers.id as na_id')
         ->get();
         return view('regional/home', compact('data'));
     }

@@ -89,8 +89,8 @@
     <div class="form-group">
         <label for="status_naker">Status Naker</label>
         <select class="form-select" aria-label="Default select example" name="status_naker" id="status_naker" required="required">
-            <option value=1 @if (old('active') == 1) selected @endif>Active</option>
-            <option value=0 @if (old('active') == 0) selected @endif>Non Active</option>
+            <option value=1 >Active</option>
+            <option value=0 >Non Active</option>
         </select>
     </div>
     <div class="form-group">

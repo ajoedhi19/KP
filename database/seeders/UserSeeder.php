@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
         $admins = [
             ['MasterAdmin','masteradmin@admin.com','12345678',1],
             ['Procurement', 'procurement@admin.com', '12345678',2],
-            ['HR ragional', 'hrregional@admin.com', '12345678',3],
+            ['HR regional', 'hrregional@admin.com', '12345678',3],
             ['HR Area1', 'hrarea1@admin.com', '12345678',4],
             ['HR Area2', 'hrarea2@admin.com', '12345678',4],
             ['HR Area3', 'hrarea3@admin.com', '12345678',4],
