@@ -19,7 +19,6 @@
     <div class="form-group">
       <label for="Jenis_Kelamin">Jenis Kelamin</label>
       <select class="form-select" aria-label="Default select example" name="Jenis_Kelamin" id="Jenis_Kelamin" required placeholder="Jenis Kelamin">
-      <option selected>Jenis Kelamin</option>
       <option value="Laki-Laki">Laki-Laki</option>
       <option value="Perempuan">Perempuan</option>
       </select>
@@ -67,19 +66,19 @@
     <div class="form-group">
         <label for="witel">Witel</label>
         <select class="form-select" aria-label="Default select example" name="witel" id="witel" required="required">
-            <option selected>Witel</option>
-            <option value="Witel Denpasar">Witel Denpasar</option>
-            <option value="Witel Gresik">Witel Gresik</option>
-            <option value="Witel Jember">Witel Jember</option>
-            <option value="Witel Kediri">Witel Kediri</option>
-            <option value="Witel Kupang">Witel Kupang</option>
-            <option value="Witel Madiun">Witel Madiun</option>
-            <option value="Witel Malang">Witel Malang</option>
-            <option value="Witel Mataram">Witel Mataram</option>
-            <option value="Witel Pasuruan">Witel Pasuruan</option>
-            <option value="Witel Sidoarjo">Witel Sidoarjo</option>
-            <option value="Witel Singaraja">Witel Singaraja</option>
-            <option value="Witel Surabaya">Witel Surabaya</option>
+            <option value="Denpasar">Witel Denpasar</option>
+            <option value="Gresik">Witel Gresik</option>
+            <option value="Jember">Witel Jember</option>
+            <option value="Kediri">Witel Kediri</option>
+            <option value="Kupang">Witel Kupang</option>
+            <option value="Madiun">Witel Madiun</option>
+            <option value="Malang">Witel Malang</option>
+            <option value="Mataram">Witel Mataram</option>
+            <option value="Pasuruan">Witel Pasuruan</option>
+            <option value="Sidoarjo">Witel Sidoarjo</option>
+            <option value="Singaraja">Witel Singaraja</option>
+            <option value="SurabayaSealatan">Witel Surabaya Selatan</option>
+            <option value="SurabayaUtara">Witel Surabaya Utara</option>
         </select>
     </div>
     <div class="form-group">
@@ -92,7 +91,6 @@
     <div class="form-group">
         <label for="direktorat">Direktorat</label>
             <select class="form-select" aria-label="Default select example" name="direktorat" id="direktorat" required="required">
-                <option selected>Direktorat</option>
                 <option value="Construction">Construction</option>
                 <option value="Corporate Office Group">Corporate Office Group</option>
                 <option value="Finance">Finance</option>
@@ -104,7 +102,6 @@
     <div class="form-group">
         <label for="Level_Pendidikan">Level Pendidikan</label>
             <select class="form-select" aria-label="Default select example" name="Level_Pendidikan" id="Level_Pendidikan" required="required">
-            <option selected>Level Pendidikan</option>
             <option value="SMA">SMA</option>
                     <option value="STM">STM</option>
                     <option value="D1">D1</option>
@@ -122,13 +119,12 @@
     </div>
     <div class="form-group">
         <label for="Posisi">Posisi</label>
-        <select class="form-select" aria-label="Default select example" name="Posisi" id="Posisi" required="required">
-            <option selected>Pilih Posisi</option>
-            <option value="Teknisi Provisioning">Teknisi Provisioning</option>
-            <option value="Teknisi Migrasi">Teknisi Migrasi</option>
-            <option value="Teknisi Wilsus">Teknisi Wilsus</option>
-            <option value="Teknisi IOAN">Teknisi IOAN</option>
-            <option value="Teknisi BGES Serices">Teknisi BGES Serices</option>
+        <select class="form-select" aria-label="Default select example" name="Posisi" id="Posisi" required="required">\
+            <option value="Provisioning">Teknisi Provisioning</option>
+            <option value="Migrasi">Teknisi Migrasi</option>
+            <option value="Wilsus">Teknisi Wilsus</option>
+            <option value="IOAN">Teknisi IOAN</option>
+            <option value="BGES Serices">Teknisi BGES Serices</option>
         </select>
     </div>
     <div class="form-group">
@@ -142,14 +138,12 @@
     <div class="form-group">
         <label for="Regional">Regional</label>
         <select class="form-select" aria-label="Default select example" name="Regional" id="Regional" required="required">
-            <option selected>Pilih Regional</option>
             <option value="Jatim Bali Nusra">Jatim Bali Nusra</option>
         </select>
     </div>
     <div class="form-group">
         <label for="Status_Kepegawaian">Status Kepegawaian</label>
         <select class="form-select" aria-label="Default select example" name="Status_Kepegawaian" id="Status_Kepegawaian" required="required">
-            <option selected>Status Kepegawaian</option>
             <option value="Kontrak">Kontrak</option>
             <option value="Tetap">Tetap</option>
         </select>

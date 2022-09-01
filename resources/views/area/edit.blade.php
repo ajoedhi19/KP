@@ -72,6 +72,10 @@
                 @endif
                 
             @endforeach --}}
+            @if(old('witel', $data->witel) == $data->witel)
+            <option value={{ old('witel' ,$data->witel) }} selected>{{ old('witel' ,$data->witel) }}</option>
+
+            @else
             <option value="Witel Denpasar" {{ old('witel') == $data->witel ? ' selected' : ' ' }}>Witel Denpasar</option>
             <option value="Witel Gresik" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Gresik</option>
             <option value="Witel Jember" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Jember</option>
@@ -84,13 +88,19 @@
             <option value="Witel Sidoarjo" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Sidoarjo</option>
             <option value="Witel Singaraja" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Singaraja</option>
             <option value="Witel Surabaya" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Surabaya</option>
+            @endif
         </select>
     </div>
     <div class="form-group">
         <label for="status_naker">Status Naker</label>
         <select class="form-select" aria-label="Default select example" name="status_naker" id="status_naker" required="required">
+            @if(old('status_naker', $data->status_naker) == $data->status_naker)
+            <option value={{ old('status_naker' ,$data->status_naker) }} selected>{{ old('status_naker' ,$data->status_naker) }}</option>
+
+            @else
             <option value=1 >Active</option>
             <option value=0 >Non Active</option>
+            @endif
         </select>
     </div>
     <div class="form-group">
@@ -133,12 +143,15 @@
     <div class="form-group">
         <label for="Posisi">Posisi</label>
         <select class="form-select" aria-label="Default select example" name="Posisi" id="Posisi" required="required">
-            <option selected>Pilih Posisi</option>
+            @if (old('Posisi', $data->Posisi) == $data->Posisi)
+                    <option value={{ old('Posisi' ,$data->Posisi) }} selected>{{ old('Posisi' ,$data->Posisi) }}</option>
+                @else
             <option value="Teknisi Provisioning">Teknisi Provisioning</option>
             <option value="Teknisi Migrasi">Teknisi Migrasi</option>
             <option value="Teknisi Wilsus">Teknisi Wilsus</option>
             <option value="Teknisi IOAN">Teknisi IOAN</option>
             <option value="Teknisi BGES Serices">Teknisi BGES Serices</option>
+            @endif
         </select>
     </div>
     <div class="form-group">
@@ -182,7 +195,7 @@
             <option value="0">Ditolak</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Tambah</button>
+    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
   </form>
 </div>
 @endsection

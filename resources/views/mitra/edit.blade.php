@@ -72,6 +72,10 @@
                 @endif
                 
             @endforeach --}}
+            @if(old('witel', $data->witel) == $data->witel)
+            <option value={{ old('witel' ,$data->witel) }} selected>{{ old('witel' ,$data->witel) }}</option>
+
+            @else
             <option value="Witel Denpasar" {{ old('witel') == $data->witel ? ' selected' : ' ' }}>Witel Denpasar</option>
             <option value="Witel Gresik" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Gresik</option>
             <option value="Witel Jember" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Jember</option>
@@ -84,13 +88,25 @@
             <option value="Witel Sidoarjo" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Sidoarjo</option>
             <option value="Witel Singaraja" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Singaraja</option>
             <option value="Witel Surabaya" {{ old('witel') == $data->witel ? ' selected' : ' ' }} >Witel Surabaya</option>
+            @endif
         </select>
     </div>
     <div class="form-group">
         <label for="status_naker">Status Naker</label>
         <select class="form-select" aria-label="Default select example" name="status_naker" id="status_naker" required="required">
-            <option value=1 @if (old('active') == 1) selected @endif>Active</option>
-            <option value=0 @if (old('active') == 0) selected @endif>Non Active</option>
+            @if(old('status_naker', $data->status_naker) == $data->status_naker)
+            <option value={{ old('status_naker' ,$data->status_naker) }} selected>
+                @if( old('status_naker' ,$data->status_naker) == 0)
+                    Non Active
+                @else
+                    Active
+                @endif
+            </option>
+
+            @else
+            <option value=1 >Active</option>
+            <option value=0 >Non Active</option>
+            @endif
         </select>
     </div>
     <div class="form-group">
@@ -133,12 +149,15 @@
     <div class="form-group">
         <label for="Posisi">Posisi</label>
         <select class="form-select" aria-label="Default select example" name="Posisi" id="Posisi" required="required">
-            <option selected>Pilih Posisi</option>
+            @if (old('posisi', $data->posisi) == $data->posisi)
+                    <option value={{ old('posisi' ,$data->posisi) }} selected>{{ old('posisi' ,$data->posisi) }}</option>
+                @else
             <option value="Teknisi Provisioning">Teknisi Provisioning</option>
             <option value="Teknisi Migrasi">Teknisi Migrasi</option>
             <option value="Teknisi Wilsus">Teknisi Wilsus</option>
             <option value="Teknisi IOAN">Teknisi IOAN</option>
             <option value="Teknisi BGES Serices">Teknisi BGES Serices</option>
+            @endif
         </select>
     </div>
     <div class="form-group">
@@ -158,9 +177,12 @@
     <div class="form-group">
         <label for="Status_Kepegawaian">Status Kepegawaian</label>
         <select class="form-select" aria-label="Default select example" name="Status_Kepegawaian" id="Status_Kepegawaian" required="required">
-            <option selected>Status Kepegawaian</option>
+            @if (old('Status_Kepegawaian', $data->Status_Kepegawaian) == $data->Status_Kepegawaian)
+                    <option value={{ old('Status_Kepegawaian' ,$data->Status_Kepegawaian) }} selected>{{ old('Status_Kepegawaian' ,$data->Status_Kepegawaian) }}</option>
+                @else
             <option value="Kontrak">Kontrak</option>
             <option value="Tetap">Tetap</option>
+            @endif
         </select>
     </div>
     <div class="form-group">
@@ -175,7 +197,7 @@
       <label for="Kontrak_Kerja">Kontrak Kerja</label>
       <input type="file" class="form-control" id="Kontrak_Kerja" aria-describedby="emailHelp" placeholder="Kontrak Kerja" name="Kontrak_Kerja" value={{ old('Kontrak_Kerja' ,$data->Kontrak_Kerja) }}>
     </div>
-    <button type="submit" class="btn btn-primary">Tambah</button>
+    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
   </form>
 </div>
 @endsection

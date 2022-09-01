@@ -212,10 +212,20 @@ class DashboardController extends Controller
     public function regionalHome(){
         $data = Naker::join('users', 'user_id', '=', 'users.id')
         ->where('Roles',1)
+        ->whereNull('NIK')
         ->select('*','nakers.id as na_id')
-        ->orderBy('na_id', 'DESC')
+        ->orderBy('na_id', 'ASC')
         ->get();
         return view('regional/home', compact('data'));
+    }
+    public function regionalDashboard(){
+        $data = Naker::join('users', 'user_id', '=', 'users.id')
+        ->where('Roles',1)
+        ->whereNotNull('NIK')
+        ->select('*','nakers.id as na_id')
+        ->orderBy('na_id', 'ASC')
+        ->get();
+        return view('regional/dashboard', compact('data'));
     }
 
     public function regionalEdit($id)

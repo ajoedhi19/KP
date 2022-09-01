@@ -48,6 +48,7 @@ Route::get('area/edit/{id}', [DashboardController::class, 'areaEdit'])->name('ar
 Route::post('area/edit/{id}', [DashboardController::class, 'areaStore'])->name('area.store')->middleware('isadmin');
 
 Route::get('regional/home', [DashboardController::class, 'regionalHome'])->name('regional.home')->middleware('isadmin');
+Route::get('regional/dashboard', [DashboardController::class, 'regionalDashboard'])->name('regional.dashboard')->middleware('isadmin');
 Route::get('regional/edit/{id}', [DashboardController::class, 'regionaledit'])->name('regional.edit')->middleware('isadmin');
 Route::post('regional/edit/{id}', [DashboardController::class, 'regionalstore'])->name('regional.store')->middleware('isadmin');
 
